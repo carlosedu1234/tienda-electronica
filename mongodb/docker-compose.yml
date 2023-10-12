@@ -1,0 +1,18 @@
+version: '6'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    container_name: products-electronics # Nombre del contenedor
+    hostname: host-mongo 
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - ./data:/data/db
+      - ./data/log:/var/log/mongodb  # Corregido el camino del volumen de log
+    ports:
+      - '27017:27017'
+
+ 

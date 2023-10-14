@@ -6,8 +6,8 @@ export const ProducSchema=new Schema({
     image: String,
     price: Number,
     createAt:{
-        type:Date,
-        default:Date.now
+       type:Date,
+       default:Date.now
     }
 
 })
